@@ -7,7 +7,7 @@ type CurrencyExchangePropsType = {
     isBuying: boolean;
     amountOfBYN: string;
     amountOfCurrency: string;
-     changeCurrencyField: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    changeCurrencyField: (e: React.ChangeEvent<HTMLInputElement>) => void;
     changeAction: (e: React.MouseEvent<HTMLSpanElement>) => void;
     changeCurrentCurrency: (e: React.MouseEvent<HTMLLIElement>) => void;
 };
