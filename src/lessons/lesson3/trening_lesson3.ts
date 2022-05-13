@@ -1,7 +1,8 @@
+import axios from "axios";
 
 export const WRING_OUT_TIME = 500;
 const SQUATTING_TIME = 200;
-function wringOut(count:number){
+export function wringOut(count:number){
     return new Promise((resolve, reject) => {
         if(count > 100){
             reject(new Error("Слишком много отжиманий"));
@@ -12,7 +13,7 @@ function wringOut(count:number){
     });
 }
 
-function squatting(count:number){
+export function squatting(count:number){
     return new Promise((resolve, reject) => {
         if(count > 1000){
             reject(new Error("Слишком много приседаний"));
@@ -41,3 +42,8 @@ async function myTraining() {
 myTraining().then((result) => {
     console.log(result);
 })
+
+const promise1 = axios.get('http://www.omdbapi.com')
+promise1.then((data) => {console.log(data)}
+
+)
