@@ -15,6 +15,13 @@ promise2.then(
     result=>alert(result),
     error=>alert(error)
 )
+ const runAwait = async () => {
+    let vsePropalo = await promise
+    console.log("vsePropalo")
+     }
+
+  runAwait()
+
 
 let blackHole = new Promise((resolve,reject)=>{
     for (let i = 0; i <10; i++) {
@@ -40,3 +47,9 @@ function delay(ms:number) {
 
 delay(3000)
     .then(() => alert('выполнилось через 3 секунды'));
+
+export function getNumber(){
+    const promise =Promise.resolve(Math.random())
+    return promise
+}
+getNumber().then(n=>console.log(n))
