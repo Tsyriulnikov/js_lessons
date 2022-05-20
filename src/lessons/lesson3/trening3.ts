@@ -1,4 +1,4 @@
-import {rejects} from "assert";
+
 
 export let promise = new Promise((resolve, reject) => {
         setTimeout(() => resolve("done"), 1000);
